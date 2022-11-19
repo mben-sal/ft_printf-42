@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 18:14:52 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/18 18:31:44 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/19 14:20:58 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 void	ft_check_per(va_list pf, char c, int *len)
 {
 	if(c == 'c')
-		ft_putchar(va_arg(pf,int),len);
-	else if(c == 's')
-		ft_putstr(va_arg(pf,char*),len);
-	else if(c == 'd', c == 'i')
-		ft_putnbr(va_arg(pf,int),len);
+		ft_putchar (va_arg (pf, int), len);
+	else if (c == 's')
+		ft_putstr (va_arg (pf, char*), len);
+	else if (c == 'd' || c == 'i')
+		ft_putnbr (va_arg (pf, int), len);
 	else if (c == 'x' || c == 'X')
-		ft_puthex(va_arg(pf,int),len, c);
+		ft_puthex (va_arg(pf, int), c, len);
 	else if ( c == 'u')
-		ft_putnbru(va_arg(pf,int),len);
+		ft_putnbru (va_arg(pf, int), len);
 	else if (c == '%')
-		ft_putchar('%', len);
+		ft_putchar ('%', len);
 	else if (c == 'p')
-			ft_pointer(va_arg(pf,int),len);
-	
-	
+		ft_pointer (va_arg(pf, int), len);
+	else
+		ft_putchar(c, len);
 }
 
 int	ft_printf(const char *str, ...)
@@ -44,11 +44,21 @@ int	ft_printf(const char *str, ...)
 	while (str[i])
 	{
 		if(str[i]=='%')
+		{
 			ft_check_per(pf, str[i + 1], &len);
+			i++;
+		}
 		else
 			ft_putchar(str[i], &len);
 		i++;
 	}
 	va_end(pf);
 	return (len);
+}
+
+
+int	main()
+{
+	ft_printf("%d\n", ft_printf("%s\n", NULL));
+	printf("%d\n", printf("%s\n", NULL));
 }

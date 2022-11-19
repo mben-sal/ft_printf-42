@@ -6,14 +6,21 @@
 #    By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/22 11:15:38 by mben-sal          #+#    #+#              #
-#    Updated: 2022/11/15 17:56:40 by mben-sal         ###   ########.fr        #
+#    Updated: 2022/11/19 13:59:40 by mben-sal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =   printf.a
-HEADER = printf.h
+NAME =   libftprintf.a
 
-SRC =   
+HEADER = ft_printf.h
+
+SRC =	ft_pointer.c\
+		ft_printf.c\
+		ft_putchar.c\
+		ft_puthex.c\
+		ft_putnbr.c\
+		ft_putnbu.c\
+		ft_putstr.c
 
 OBJ =    $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:47:18 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/18 17:43:46 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/19 14:22:47 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_putstr(char *s, int *len)
 
 	i = 0;
 	if (!s)
-		ft_putstr("(null)", len);
+		s = "(null)";
 	while (s[i])
 	{
 		ft_putchar(s[i], len);
