@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 17:38:44 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/18 17:45:16 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/19 14:30:09 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbru(int n, int *len)
 {
-	unsigned int 	nbr;
+	unsigned int	nbr;
 
 	nbr = n;
 	if (nbr <= 9)
@@ -24,6 +24,6 @@ void	ft_putnbru(int n, int *len)
 	else
 	{
 		ft_putnbr(nbr / 10, len);
-		ft_putnbr(nbr % 10,	len);
+		ft_putnbr(nbr % 10, len);
 	}
 }
