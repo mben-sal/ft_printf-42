@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 18:14:52 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/19 16:28:41 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/19 18:15:54 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_check_per(va_list pf, char c, int *len)
 	else if (c == 'x' || c == 'X')
 		ft_puthex (va_arg(pf, int), c, len);
 	else if (c == 'u')
-		ft_putnbru (va_arg(pf, int), len);
+		ft_putnbru (va_arg(pf, unsigned int), len);
 	else if (c == '%')
 		ft_putchar ('%', len);
 	else if (c == 'p')
@@ -57,10 +57,10 @@ int	ft_printf(const char *str, ...)
 	return (len);
 }
 
-// int main()
-// {	
-// 	int i = 45;
-// 	printf("%p\n", &i);
-// 	ft_printf("%p\n", &i);
-// 	return(0);
-// }
+int main()
+{	
+	int i = 4;
+	printf("%d\n", printf("manar%p\n",&i));
+	ft_printf("%d\n", ft_printf("manar%p\n",&i ));
+	return(0);
+}

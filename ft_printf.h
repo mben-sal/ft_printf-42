@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 18:10:04 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/19 16:11:05 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/19 18:13:33 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int		ft_printf(const char *str, ...);
 void	ft_putchar(char c, int *len);
 void	ft_putnbr(int n, int *len);
-void	ft_putnbru(int n, int *len);
+void	ft_putnbru(unsigned int nbr, int *len);
 void	ft_putstr(char *s, int *len);
 void	ft_puthex(unsigned int n, char arg, int *len);
 void	ft_putp( unsigned long nbr, int *len );
