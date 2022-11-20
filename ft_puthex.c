@@ -6,7 +6,7 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 17:56:07 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/19 17:59:09 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/19 20:02:29 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	ft_puthex(unsigned int n, char arg, int *len)
 {
-	
 	if (n < 16)
 	{
 		if (n <= 9)

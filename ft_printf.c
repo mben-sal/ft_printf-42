@@ -6,12 +6,11 @@
 /*   By: mben-sal <mben-sal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 18:14:52 by mben-sal          #+#    #+#             */
-/*   Updated: 2022/11/19 18:15:54 by mben-sal         ###   ########.fr       */
+/*   Updated: 2022/11/20 13:57:11 by mben-sal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 void	ft_check_per(va_list pf, char c, int *len)
 {
@@ -55,12 +54,4 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(pf);
 	return (len);
-}
-
-int main()
-{	
-	int i = 4;
-	printf("%d\n", printf("manar%p\n",&i));
-	ft_printf("%d\n", ft_printf("manar%p\n",&i ));
-	return(0);
 }
